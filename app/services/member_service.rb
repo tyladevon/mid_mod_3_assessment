@@ -3,13 +3,9 @@ class MemberService
     @house = house
   end
 
-  def members_get
+  def members_call
     response = conn.get("v1/characters")
-    data = JSON.parse(response.body, symbolize_names: :true)
-
-    data.map do |member_info|
-      member = Member.new(member_info)
-    end
+    JSON.parse(response.body, symbolize_names: :true)
   end
 
   private
