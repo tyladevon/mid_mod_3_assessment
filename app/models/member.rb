@@ -2,8 +2,8 @@ class Member
   attr_reader :name, :role, :house, :patronus
   def initialize(info)
     @name = info[:name]
-    @role = nil
+    @role = info[:role]
     @house = info[:house]
-    @patronus = nil
+    @patronus = info[:patronus]
   end
 end
