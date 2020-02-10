@@ -1,7 +1,9 @@
-<h3><%= members.count %> house members for Gryffindor</h3>
-<p><% members.each do |member|%></p>
-  <p><%= member.name %></p>
-  <p><%= member.role %></p>
-  <p><%= member.house %></p>
-  <p><%= member.patronus %></p>
-  <% end %>
+<h3><%= members.count %> Order of the Pheonix Members for Gryffindor</h3>
+<% members.each do |member|%>
+  <ul class="member">
+    <li class="name"><p><%= member.name %></p></li>
+    <li class="role"><p><%= member.role %></p></li>
+    <li class="house"><p><%= member.house %></p></li>
+    <li class="patronus"><p><%= member.patronus %></p></li>
+    <% end %>
+  </ul>

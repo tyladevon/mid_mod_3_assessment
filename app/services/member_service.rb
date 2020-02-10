@@ -8,8 +8,7 @@ class MemberService
     data = JSON.parse(response.body, symbolize_names: :true)
 
     data.map do |member_info|
-      Member.new(member_info)
-      binding.pry
+      member = Member.new(member_info)
     end
   end
 

@@ -7,10 +7,10 @@ describe 'As a User, when I visit the dashboard' do
       select "Gryffindor", from: :house
       click_on 'Search For Members'
       expect(current_path).to eq('/search')
-      expect(page).to have_content("21 house members for Gryffindor")
-      expect(page).to have_css(".members", count: 21)
+      expect(page).to have_content("21 Order of the Pheonix Members for Gryffindor")
+      expect(page).to have_css(".member", count: 21)
 
-      within(first(".members")) do
+      within(first(".member")) do
         expect(page).to have_css(".name")
         expect(page).to have_css(".role")
         expect(page).to have_css(".house")
