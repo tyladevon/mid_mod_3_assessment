@@ -1,7 +1,7 @@
 class SearchController < ApplicationController
   def index
     render locals: {
-      member: MemberService.new(params[:house])
+      members: MemberService.new(params[:house]).members_get
     }
   end
 end

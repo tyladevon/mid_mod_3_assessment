@@ -8,7 +8,7 @@ describe 'As a User, when I visit the dashboard' do
       click_on 'Search For Members'
       expect(current_path).to eq('/search')
       expect(page).to have_content("21 house members for Gryffindor")
-      expect(page).to have_css(".members, count: 21")
+      expect(page).to have_css(".members", count: 21)
 
       within(first(".members")) do
         expect(page).to have_css(".name")
