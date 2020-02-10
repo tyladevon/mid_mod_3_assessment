@@ -1,0 +1,7 @@
+<h3><%= members.count %> house members for Gryffindor</h3>
+<p><% members.each do |member|%></p>
+  <p><%= member.name %></p>
+  <p><%= member.role %></p>
+  <p><%= member.house %></p>
+  <p><%= member.patronus %></p>
+  <% end %>
